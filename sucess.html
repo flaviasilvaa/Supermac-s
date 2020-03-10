@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<html lang="en">
+<head>
+	<meta charset="utf-8"/> <!--for special caracters -->
+	<meta name ="description" content="This is a website Project"> 
+	<meta name ="author" content = "Flavia Silva"/>
+	<title>supermacProject - Web Project</title>
+	<link href="https://fonts.googleapis.com/css?family=Clicker+Script|Lobster+Two|Roboto" rel="stylesheet"> 
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script type="text/javascript">
+
+		window.onload = function () {
+			var chart = new CanvasJS.Chart("chartContainer",
+			{
+				title:{
+					text: "Top Five sellers"
+				},
+
+				data: [
+				{
+					type: "bar",
+
+					dataPoints: [
+					{ x: 10, y: 80, label:"Mighty Mac" },
+					{ x: 20, y: 65, label:"Chicken Burger" },
+					{ x: 30, y: 59, label:"Veggie Burger" },
+					{ x: 40, y: 52, label:"Hamburger" },
+					{ x: 50, y: 45, label:"Milk Shake" },
+					
+					]
+				}
+				]
+			});
+
+			chart.render();
+		}
+	</script>
+	<script src="canvasjs.min.js"></script>
+	<title>Top 5 sellers</title>
+
+	
+
+	<div class="header">
+				<header>
+				<div >
+		<img class="logo" src="supermacs_logo_Large.png"/>
+			<br>
+			<br>
+			<br>
+			<br>
+				</div>
+				<div >
+					<nav>
+	   			 	 	<ul>
+						     <li><a href="index.html">Home</a></li>
+						     <li><a href="aboutUs.html">About Us</a></li>
+					    	 <li><a href="products.html">Products</a></li>
+					     	 <li><a href="gallery.html">Gallery</a></li>
+					     	 <li><a href="contactUs.html">Contact Us</a></li>
+					   	</ul>
+			 	 	</nav>
+			 	</div>
+			</header>
+		</div>
+<br>
+<br>
+<br>
+<div id="breadcrumbs">
+   <a href="index.html">Home</a> >> <b>Sucess</b>
+</div>
+<br>
+<br>
+<br>
+<br>
+</head>
+<body>
+	<div id="chartContainer" style="height: 350px; width: 100%;">
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="footer">
+    <footer>
+ <div>
+     <span>&copy; 2017 -Supermacs.All rights reserved. Web Design by Flavia Silva</span> <!-- the tag span does not live the text without any content-->
+    </footer>
+</div>
+</div>
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/> <!--for special caracters -->
+  <meta name ="description" content="This is a website Project"> 
+  <meta name ="author" content = "Flavia Silva"/>
+  <title>supermacProject - Web Project</title>
+  <link href="https://fonts.googleapis.com/css?family=Clicker+Script|Lobster+Two|Roboto" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/style.css"/><!-- to call my css file -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"><!--all the scripts to call my jquery functions -->
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>  
+</head>
+
+<body>
+   
+  <script>
+  $( function() {
+    var projects = [
+      {
+       // value: "MilkShake",
+        label: "Milk Shake",
+        desc: "Supermac’s delicious Milkshakes available in 3 flavours",
+        icon: "MilkShake.png"
+      },
+      {
+        //value: "chickenBurger",
+        label: "Chicken burger",
+        desc: "A tasty breaded chicken burger, served in a toasted sesame seed bun",
+        icon: "ChickenBurger.png"
+      },
+      {
+        //value: "Supermac",
+        label: "Supermac",
+        desc: "The NEW Supermac’s 5oz Burger made with 100% Fresh Premium Irish Beef.",
+        icon: "Supermac.png"
+      },
+      {
+        // value: "MightyMac",
+        label: "Mighty Mac",
+        desc: "A succulent double burger complete with two 100% Irish beef patties",
+        icon: "MightyMac.png"
+      },
+      { 
+      //value: "Bucket",
+        label: "Chicken Bucket",
+        desc: "A bucket of tender, approx 42 nuggets per bucket",
+        icon : "Bucket.png"
+      }
+
+    ];
+ 
+    $( "#project" ).autocomplete({
+      minLength: 0,//this call for how many letter I should insert to autocomplete
+      source: projects,
+      focus: function( event, ui ) {
+        $( "#project" ).val( ui.item.label );
+        return false;
+      },
+      select: function( event, ui ) {
+        $( "#project" ).val( ui.item.label );
+       // $( "#project-id" ).val( ui.item.value );
+        $( "#project-description" ).val( ui.item.desc );
+        $( "#project-icon" ).attr( "src", "complete/" + ui.item.icon );
+        console.log(ui.item.icon);
+ 
+        return false;
+      }
+    })
+    .autocomplete( "instance" )._renderItem = function( ul, item ) {
+      return $( "<li>" )
+        .append( "<div>" + item.label + "<br>" + item.desc + "</div>" )
+        .appendTo( ul );
+    };
+  } );
+ 
+
+ </script>
+
+  <div id="project-label">A selected range of food for you:</div><br>
+    <img id="project-icon" src="complete/transparent_1x1.png" class="ui-state-default" alt=""><br><br>
+    <input id="project">
+    <input type="hidden" id="project-id"><br>
+      <div id="project-description"></div>
+  <div class="extra-content">
+  </div>
+
+
+  <img class="logo" src="supermacs_logo_Large.png"/>
+
+  
+<div class="header">
+        <header>
+         <div >
+          <nav>
+              <ul>
+                 <li><a href="index.html">Home</a></li>
+                 <li><a href="aboutUs.html">About Us</a></li>
+                 <li><a href="products.html">Products</a></li>
+                 <li><a href="gallery.html">Gallery</a></li>
+                 <li><a href="contactUs.html">Contact Us</a></li>
+                 <li><a href="sucess.html">Success</a></li>
+              </ul>
+          </nav>
+        </div>
+      </header>
+    </div>
+<br>
+<br>
+<br>
+<br>
+<div>
+    <img  src="menuPage.jpg" style  alt="Main menu"/>
+    <a href="products.html" class="buttom1">Products &raquo;</a>
+</div>
+
+
+  <script>//buttom click functions
+function goThere(){
+   window.location="order.html"; //function to bring the user to order page
+}
+
+</script> 
+<div class="showBox">
+  <button onclick="goThere()">Buy It Now</button>
+</div>
+
+ <div>
+      <section>
+        <h2 class="news">Supermac's Food</h2>
+        <p class="p1">At Supermac’s we take great pride in the quality of our food. Supermac’s has developed a unique innovative menu that caters for customers throughout the day. We offer </p1>traditional meals serving prime beef burgers and succulent chicken and a range of drinks. All Supermac’s food is prepared to the highest standards and professionalism and comes with a Supermac’s quality guarantee<p1>. We are committed to providing our customers with easy access to product information, making it easy to maintain a balanced diet. The full Supermac’s menu is now available to order online for collection in our restaurants</p1> or for home delivery where available.</p1>
+        </section>
+     <div>
+        <h3 class="news">News</h3>
+        <img src="news.jpg" alt="New hamburger" width="300px";S/>
+        <p class="p1">All Supermac’s food is prepared employing the highest quality food principles. Supermac’s have received numerous awards throughout the years and is dedicated to employing </p1> the highest hygiene, quality and work practice standards across the business. Supermac’s restaurants have been nominated for and have won excellent Irish Quality Association awards in 2005 and 2006. All meat products are 100% <p1>traceable and are Irish farm assured.</p1><a href="gallery.html">Read more &raquo;</a></p>
+     </div> 
+        </section> 
+        <br>
+        <br>       
+  <div class="footer">
+    <footer>
+ <div>
+     <span>&copy; 2017 -Supermacs.All rights reserved. Web Design by Flavia Silva</span> <!-- the tag span does not live the text without any content-->
+    </footer>
+</div>
+</div>
+</body>
+</footer>
+</div>
+</p>
+</html>

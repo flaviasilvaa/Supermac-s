@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/> <!--for special caracters -->
+  <meta name ="description" content="This is a website Project"> 
+  <meta name ="author" content = "Flavia Silva"/>
+  <title>supermacProject - Web Project</title>
+  <link href="https://fonts.googleapis.com/css?family=Clicker+Script|Lobster+Two|Roboto" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/style.css"/><!-- to call my css file -->
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> 
+</head>
+  <body>
+
+    <img class="logo" src="supermacs_logo_Large.png"/>
+    <br>
+    <br>
+    <br>
+<div class="header">
+        <header>
+         <div >
+          <nav>
+              <ul>
+                 <li><a href="index.html">Home</a></li>
+                 <li><a href="aboutUs.html">About Us</a></li>
+                 <li><a href="products.html">Products</a></li>
+                 <li><a href="gallery.html">Gallery</a></li>
+                 <li><a href="contactUs.html">Contact Us</a></li>
+               </ul>
+          </nav>
+        </div>
+      </header>
+    </div>
+<br>
+<br>
+<br>
+<div id="breadcrumbs">
+           <a href="index.html">Home</a> >><b>Products>></b> <b>Order</b>
+ </div>
+
+
+<script>// this function creating the accordion the id should be pass to the header I want to apply
+      $( function() {
+      $( "#accordion" ).accordion();
+      } );
+  </script>
+
+  <script>//to create the calendar on the order screen
+     $( function() {
+       $( "#datepicker" ).datepicker();
+      });
+  </script>
+
+
+
+  <script type="text/javascript">/* function to validate all fields in my form */
+    function validateForm(){
+        
+      var x = document.forms["myForm"]["fname"].value;
+        if(x == ""){
+          alert("name must be filled out");
+          validateForm.fname.focus();
+          return false;
+        
+        }
+        var y= document.forms["myForm"]["address"].value;
+        if(y == ""){
+          alert("your address must be filled out");
+          validateForm.address.focus();
+          return false;
+        
+        }
+        var p= document.forms["myForm"]["phone"].value;
+        if(p == ""){
+          alert("your contact number must be filled out");
+          validateForm.phone.focus();
+          return false;
+        
+        }
+        var e = document.forms["myForm"]["email"].value;
+        if(e == ""){
+          alert("your email must be filled out");
+          validateForm.email.focus();
+        }
+
+        
+  </script>
+
+    
+      <br>
+      <br>
+    <div id="accordion">
+    <h2 align="center">Begin your order</h2>    
+      <select class="selectM">
+      </div>
+          <option style="background:#ffffff  url(galleryB/Supermac.png) no-repeat;">Supermacs Hamburger<p>  really tasty hamburger</option>   
+          <option style="background:#ffffff url(galleryB/CheeseBurger.png) no-repeat;">Cheese Burger</option> 
+        <option style="background:#ffffff  url(galleryB/ChickenBurger.png) no-repeat;">Chicken Burger</option>  
+          <option style="background:#ffffff  url(galleryB/MightyMac.png) no-repeat;">Mighty Mac</option>  
+        <option style="background:#ffffff  url(galleryB/Grilledchicken.png) no-repeat;"> Grilled Chicken </option>
+        <option style="background:#ffffff  url(galleryB/VeggieBurge.png) no-repeat;">Veggie Burger</option> 
+        <option style="background:#ffffff  url(galleryA/Bucket.png) no-repeat;">Chicken Bucket</option> 
+          <option style="background:#ffffff  url(galleryA/Chips.png) no-repeat;">Chips</option> 
+          <option style="background:#ffffff  url(galleryA/CodChips.png) no-repeat;">Cod Chips</option>  
+        <option style="background:#ffffff  url(galleryA/GarlicCheese.png) no-repeat;">Garlic Cheese</option>  
+          <option style="background:#ffffff  url(galleryA/chickenwrap.png) no-repeat;">Chicken Wrap</option>  
+          <option style="background:#ffffff  url(galleryA/kidsburger.png) no-repeat;">Kids Hamburger</option> 
+          <option style="background:#ffffff  url(galleryA/IceCream.png) no-repeat;">Ice Cream</option>  
+          <option style="background:#ffffff  url(galleryA/MilkShake.png) no-repeat;">Milk Shake</option>  
+          <option style="background:#ffffff  url(galleryA/Coke.png) no-repeat;">Minerals</option>
+      </select>
+    <br>
+    <br>
+    
+  <div id="accordion">
+      <h2 align="center">Complete order</h2>
+    </div>
+
+
+    <div class="datepicker" align="center">Date: <input type="text" id="datepicker"></div>
+
+
+  <div class="form1">
+  <form  enctype="text/plain" name="myForm"  action="mailto:"  onsubmit="return validateForm()" method="get">
+  Name:<br><input type="text" name="fname" required="" title="Type your full name"><br>
+  Home Address:<br /><input type="text" name="address" required="" title="Type your address"><br>
+  Phone Number<br><input type="text" name="phone" required="" title="Type your contact information"><br>
+  Email Address:<br/><input type="text" name="email" required="" title="Type your email"><br><br>
+  <input type="submit" class="form2" value="Place Order" onclick="confirmation();" >
+  </form>
+  </div>
+  
+  <br>
+  <br>
+
+  <div id="accordion">
+  <h2 align="center">Delivery Information</h2>
+  </div>
+  <p class="news">
+    All orders over 30&euro get free delivery.
+    We have an efficient team to delivery your food straight to your door.
+    </p>
+<br>
+<br>  
+
+        
+  <script type="text/javascript">
+    function confirmation()//this function checks all the fields if all of them are filled out the system place the order
+    {
+      var x = document.forms["myForm"]["fname"].value;
+        if(x == ""){
+          alert("name must be filled out");
+          validateForm.fname.focus();
+          return false;
+        
+        }
+        var y= document.forms["myForm"]["address"].value;
+        if(y == ""){
+          alert("your address must be filled out");
+          validateForm.address.focus();
+          return false;
+        
+        }
+        var p= document.forms["myForm"]["phone"].value;
+        if(p == ""){
+          alert("your contact number must be filled out");
+          validateForm.phone.focus();
+          return false;
+        
+        }
+        var e = document.forms["myForm"]["email"].value;
+        if(e == ""){
+          alert("your email must be filled out");
+          validateForm.email.focus();
+        }
+
+      
+      alert("Your order has been placed");
+      document.write("your order has been placed");
+      document.location.href = "orderComplete.html";//just send the customer to another page
+    }
+  </script> 
+
+<br>
+<br>
+<div class="footer">
+    <footer>
+ <div>
+     <span>&copy; 2017 -Supermacs.All rights reserved. Web Design by Flavia Silva</span> <!-- the tag span does not live the text without any content-->
+    </footer>
+</div>
+</div>
+</body>
+</html>
